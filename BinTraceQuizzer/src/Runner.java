@@ -29,8 +29,10 @@ public class Runner
 									}
 							}
 						Collections.sort(nums);
-						
-						System.out.println("The whole algorithm returned " + binarySearch(nums, targetFind(nums)));
+						//the next line is problematic; it always returns 0
+						int random=((int)( Math.random()*nums.size()));
+						System.out.println("The whole algorithm returned " + binarySearch(nums, nums.get(random)));
+						System.out.println("You got " + right + " out of " + count + "!");
 						
 						System.out.println("Do you want to do this all again?");
 						Scanner userInput=new Scanner(System.in);
@@ -80,10 +82,6 @@ public class Runner
 			}
 			 return -1;
 			 }
-		public static int targetFind(ArrayList x)
-		{
-			return (int) x.get(((int)Math.random()*x.size()));
-		}
 		public static void check(int x)
 		{
 			Scanner userInput=new Scanner(System.in);
@@ -94,7 +92,7 @@ public class Runner
 				}
 			else
 				{
-					System.out.println("Nope. Sorry.");
+					System.out.println("Nope. Sorry. It was " + x);
 				}
 			count++;
 		}
