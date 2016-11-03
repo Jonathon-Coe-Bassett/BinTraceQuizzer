@@ -14,6 +14,7 @@ public class Runner
 					{
 						System.out.println("Begin inputting numbers between 1 and 20. When you want to stop, input -1.");
 						nums=new ArrayList<Integer>();
+						//line 16 is my favorite line :)
 						int check=0;
 						while(check!=-1)
 							{
@@ -100,17 +101,19 @@ public class Runner
 		{
 			for (Integer c: nums)
 				{
-					System.out.print(c + " ");
+					System.out.printf("%-3s" , c);
 				}
 			System.out.println("");
 			for (int i=0; i<nums.size(); i++)
 				{
-					System.out.print(i + " ");
+					System.out.printf("%-3s" , i);
 				}
 			System.out.println("");
+
 		}
 		
-		/*		public static int binarySearch(ArrayList<Integer> elements, int target)
+		/*This is the raw bin search code
+		 * 		public static int binarySearch(ArrayList<Integer> elements, int target)
 			{
 			 int left = 0;
 			 int right = elements.size() - 1;
